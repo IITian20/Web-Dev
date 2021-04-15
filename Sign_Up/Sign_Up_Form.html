@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap'); 
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+        body{
+            background-color: #f8d16c;
+            font-family: 'Lato', sans-serif;
+            margin: 0px;
+        }
+        p{
+            display: none;
+            border: 2px solid red;
+            background-color: rgb(254, 241, 211);
+            padding: 10px;
+            color: red;
+            font-weight: 700;
+            font-family: 'Verdana, Geneva, Tahoma, sans-serif';
+            font-size: 20px;
+        }
+        .one{
+            margin-bottom: 5px;
+        }
+        .extra{
+            display: none;
+            margin-top: 0px;
+        }
+        .h1{
+            text-align: center;
+            font-size: 45px;
+            font-family: 'Playfair Display';
+            margin-top: 0px;
+            padding-top: 20px;
+        }
+        label{
+            font-size: 30px;
+            font-weight: 700;
+            color: #032957;
+        }
+        .form{
+            padding-left: 30px;
+        }
+        .genderLabel{
+            font-weight: 500;
+            color: black;
+        }
+        input{
+            font-size: 25px;
+        }
+        button{
+            padding: 10px;
+            margin-left: 45%;
+            margin-bottom: 30px;
+            font-family: 'Playfair Display';
+            background-color: white;
+            font-size: 25px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+            border: 0px;
+        }
+        #x{
+            padding: 10px;
+            margin-left: 42%;
+            margin-bottom: 30px;
+            font-family: 'Playfair Display';
+        }
+        button:hover{
+            background-color:  #b5cff0;
+        }
+        #qualification{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="h1">Sign Up</h1>
+    <div class="form">
+        <form onsubmit="return form1()" autocomplete="off">
+            <label for="username">
+                Name:
+            </label><br>
+            <input  type="text" id="username" name="username" maxlength="30" size="40"><br><br>
+            <p id="errorName"></p>
+            <br><br>
+            <label for="phone">
+                Phone Number:
+            </label><br>
+            <input  type="text" id="phone" name="phoneNumber" minlength="10" maxlength="14" size="20">
+            <br><br><p id="errorNum" class="one"></p><br><p id="errorNum1" class="extra"></p>
+            <br><br>
+            <label for="city">
+                City:
+            </label><br>
+            <input  type="text" id="city" name="city" size="20">
+            <br><br><p id="errorCity"></p>
+            <br><br>
+            <label for="email">
+                Email:
+            </label><br>
+            <input  type="email" id="email" name="email" size="25">
+            <br><br><p id="errorEmail"></p>
+            <br><br>
+            <label for="password">
+                Password:
+            </label><br>
+            <input  type="password" id="password" name="password" size="15" value="">
+            <br><br><p id="errorPassword" class="one"></p><br><p id="errorPassword1" class="extra"></p>
+            <br><br>
+            <label for="cpassword">
+                Confirm Password:
+            </label><br>
+            <input  type="password" id="cpassword" name="cpassword" size="15" value="">
+            <br><br><p id="errorCPassword"></p>
+            <br><br>
+            <label for="age">
+                Age:
+            </label><br>
+            <input  type="text" id="age" name="age" size="10"><label id="agelabel" for="age">&nbsp;&nbsp;years</label>
+            <br><br><p id="errorAge"></p>
+            <br><br>
+            <label for="education">
+                Education Qualification:
+            </label><br>
+            <select id="qualification" name="qualification">
+                <option value="select" selected="selected" disabled>Select one from the list</option>
+                <option value="No Education">No formal education</option>
+                <option value="Primary">Primary education</option>
+                <option value="Secondary">Secondary education or high school</option>
+                <option value="Bachelor">Bachelor's degree</option>
+                <option value="Master">Master's degree</option>
+                <option value="Doctorate">Doctorate or higher</option>
+            </select>
+            <br><br><p id="errorQualification"></p>
+            <br><br>
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender"  value="male">
+            <label for="male" class="genderLabel">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female" class="genderLabel">Female</label>
+            <br><br><p id="errorGender"></p>
+            <br><br>
+            <p id="x"></p>
+            <br><br>
+            <button type="submit" onclick="form1()">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
